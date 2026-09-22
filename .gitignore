@@ -1,0 +1,21 @@
+# Generated Godot editor cache and imported resources.
+.godot/
+
+# Local export output and export credentials.
+builds/
+.godot/export_credentials.cfg
+export_credentials.cfg
+
+# Operating system metadata.
+.DS_Store
+Thumbs.db
+
+# Local configuration, diagnostics and data.
+.env
+.env.*
+!.env.example
+*.log
+*.sqlite
+*.sqlite-*
+*.db
+*.db-*

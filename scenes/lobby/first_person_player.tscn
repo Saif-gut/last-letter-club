@@ -1,0 +1,53 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://scenes/lobby/first_person_player.gd" id="1"]
+
+[sub_resource type="CapsuleShape3D" id="Capsule"]
+radius = 0.3
+height = 1.8
+
+[sub_resource type="StandardMaterial3D" id="BodyMaterial"]
+albedo_color = Color(0.50, 0.67, 0.68, 1)
+roughness = 0.85
+
+[sub_resource type="CapsuleMesh" id="BodyMesh"]
+radius = 0.26
+height = 1.2
+
+[sub_resource type="SphereMesh" id="HeadMesh"]
+radius = 0.2
+height = 0.4
+
+[sub_resource type="SphereShape3D" id="CameraProbe"]
+radius = 0.18
+
+[node name="LobbyPlayer" type="CharacterBody3D"]
+script = ExtResource("1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+position = Vector3(0, 0.9, 0)
+shape = SubResource("Capsule")
+
+[node name="Placeholder" type="Node3D" parent="."]
+
+[node name="Body" type="MeshInstance3D" parent="Placeholder"]
+position = Vector3(0, 0.68, 0)
+mesh = SubResource("BodyMesh")
+material_override = SubResource("BodyMaterial")
+
+[node name="Head" type="MeshInstance3D" parent="Placeholder"]
+position = Vector3(0, 1.53, 0)
+mesh = SubResource("HeadMesh")
+material_override = SubResource("BodyMaterial")
+
+[node name="CameraArm" type="SpringArm3D" parent="."]
+top_level = true
+process_physics_priority = 100
+spring_length = 3.2
+margin = 0.08
+shape = SubResource("CameraProbe")
+
+[node name="Camera3D" type="Camera3D" parent="CameraArm"]
+position = Vector3(0, 0, 3.2)
+fov = 78.0
+near = 0.05

@@ -1,0 +1,13 @@
+{
+  "description": "Project choices for ambiguous cuss entries that count as mature in this single-word game, plus common insults. Neutral identity terms and ordinary anatomical terms are not blanket-blocked.",
+  "include": [
+    "anal", "bastard", "bestiality", "bitch", "boob", "brothel", "buttplug",
+    "clit", "cock", "cunnilingus", "cybersex", "damn", "dammit", "dick", "dildo",
+    "dyke", "fag", "fart", "fellatio", "fornicate", "horny", "idiot", "imbecile",
+    "incest", "lapdance", "moron", "orgasm", "orgy", "paederast", "pederast",
+    "pedophile", "pedophilia", "peepshow", "porn", "porno", "pornography",
+    "prostitute", "pube", "pussy", "retard", "shag", "shit", "sodomite",
+    "stiffy", "strapon", "tit", "turd", "willy"
+  ],
+  "exclude": ["cocky"]
+}
